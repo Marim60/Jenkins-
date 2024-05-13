@@ -1,10 +1,14 @@
 pipeline {
     agent any
     stages {
-        // Or, if using PowerShell
-        stage('Execute PowerShell Script') {
+        stage('Checkout') {
             steps {
-                powershell 'execute_is_command.ps1'
+                git credentialsId: 'Pipeline_Jenkins', url: 'https://github.com/Marim60/Jenkins-.git'
+            }
+        }
+        stage('Execute Bash Script') {
+            steps {
+                sh './execute_is_command.sh'
             }
         }
     }
