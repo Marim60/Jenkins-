@@ -1,1 +1,2 @@
-Get-ChildItem
+@echo off
+dir
