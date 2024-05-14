@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Execute Bash Script') {
             steps {
-                sh './execute_is_command.sh'
+               bat 'execute_is_command.bat'
             }
         }
     }
