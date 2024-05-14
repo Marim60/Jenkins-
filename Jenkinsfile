@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'windows' // Specify a label for a Windows agent
+    }
     stages {
         stage('Checkout') {
             steps {
