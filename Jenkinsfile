@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Execute Bash Script') {
             steps {
-               powershell 'execute_ls_command.ps1'
+               bat 'execute_ls_command.bat'
             }
         }
     }
