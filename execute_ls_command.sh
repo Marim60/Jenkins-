@@ -1,2 +1,2 @@
-@echo off
-dir
+#!/bin/bash
+ls
