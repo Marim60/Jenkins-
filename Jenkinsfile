@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Execute Bash Script') {
             steps {
-               sh 'execute_ls_command.sh'
+                sh './execute_is_command.sh'
             }
         }
     }
