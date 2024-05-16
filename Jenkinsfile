@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('Execute Bash Script') {
             steps {
-                sh './execute_ls_command.sh'
+                script {
+                    sh '''
+                    ls -l
+                    echo "Executing script..."
+                    ./execute_ls_command.sh
+                    '''
+                }
             }
         }
     }
